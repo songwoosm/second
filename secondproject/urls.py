@@ -9,11 +9,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', blog.views.home, name="home"),
+    path('', blog.views.home, name="home"),
     path('blog/',include('blog.urls')),
     path('portfolio/', portfolio.views.portfolio, name="portfolio"),
     path('signup/', accounts.views.signup, name='signup'),
-    path('', accounts.views.login, name='login'),
+    path('login/', accounts.views.login, name='login'),
     path('logout/', accounts.views.logout, name="logout"),
 ] 
 
